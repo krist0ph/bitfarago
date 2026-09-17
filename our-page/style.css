@@ -10,9 +10,25 @@ body {
     margin: 0;
     padding: 0;
     height: auto;
+    font-family: 'Outfit';
 }
 colored {
     color: var(--CTAPrimary);
+}
+button {
+    background: var(--CTAPrimary);
+    color: var(--bgColor);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 30px;
+    font-size: 24px;
+    font-family: 'Outfit';
+    border-radius: 15px;
+    transition: 0.15s ease;
+}
+button:hover {
+    transform: scale(1.05);
 }
 .navbar {
     border-bottom: 1px solid #E2E8F0;
@@ -20,7 +36,6 @@ colored {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     padding: 10px 0;
-    font-family: 'Outfit';
 }
 .header {
     display: flex;
@@ -32,7 +47,7 @@ colored {
     margin: 10px;
 }
 .header p:first-of-type {
-    font-weight: 900;
+    font-weight: 800;
     font-size: 38px;
     color: var(--primaryTextColor);
 }
@@ -81,7 +96,6 @@ colored {
     margin: 100px;
     display: flex;
     align-items: center;
-    font-family: 'Outfit';
 }
 .aboutus p {
     margin: 0;
@@ -138,4 +152,82 @@ colored {
     display: flex;
     align-items: center;
     justify-content: end;
+}
+.meetwus {
+    margin: 100px;
+}
+.member {
+    flex: 1;
+    margin: 50px 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.desc {
+    color: var(--primaryTextColor);
+    font-weight: 600;
+    font-size: 24px;
+    margin: 10px;
+}
+.member p:first-of-type {
+    color: var(--CTAPrimary);
+    font-weight: 800;
+    font-size: 34px;
+    margin: 10px 0;
+    padding: 0;
+}
+.member p:last-of-type {
+    color: var(--secondaryTextColor);
+    font-size: 24px;
+}
+.footer {
+    background: var(--primaryTextColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer div {
+    flex: 1;
+    padding: 25px;
+}
+.left p {
+    margin: 5px;
+    padding: 0;
+}
+.left p:first-of-type {
+    font-size: 34px;
+    color: var(--bgColor);
+    font-weight: 800;
+}
+.left p:last-of-type {
+    color: var(--CTASecondary);
+    font-size: 16px;
+}
+.right {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    flex-direction: column;
+}
+.right p {
+    margin: 5px;
+    padding: 0;
+    color: var(--bgColor);
+}
+.right p:first-of-type {
+    font-weight: 600;
+    font-size: 20px;
+}
+.right p:last-of-type {
+    color: var(--secondaryTextColor);
+}
+.licensing {
+    background: var(--primaryTextColor);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 25px;
+    color: var(--secondaryTextColor);
 }
