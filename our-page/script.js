@@ -1,26 +1,25 @@
-function pad(n) { return n.toString().padStart(2, '0'); }
-function updateClock() {
+function pad(n){ return n.toString().padStart(2, '0'); }
+  function updateClock(){
     const now = new Date();
     document.getElementById('clock').innerHTML =
-        pad(now.getHours()) + '<span class="colon">:</span>' + pad(now.getMinutes()) + '<span class="colon">:</span>' + pad(now.getSeconds());
+      pad(now.getHours()) + '<span class="colon">:</span>' + pad(now.getMinutes()) + '<span class="colon">:</span>' + pad(now.getSeconds());
     document.getElementById('clock-date').textContent =
-        now.toLocaleDateString('hu-HU', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
-}
-updateClock();
-setInterval(updateClock, 1000);
+      now.toLocaleDateString('hu-HU', { year:'numeric', month:'long', day:'numeric', weekday:'long' });
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
 
-document.querySelectorAll('.bio-btn').forEach(btn => {
+  document.querySelectorAll('.bio-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-        const target = document.getElementById(btn.dataset.target);
-        const isOpen = target.classList.toggle('open');
-        btn.setAttribute('aria-expanded', isOpen);
-        btn.textContent = isOpen ? 'Elrejtés' : 'Bemutatkozás';
+      const target = document.getElementById(btn.dataset.target);
+      const isOpen = target.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.textContent = isOpen ? 'Elrejtés' : 'Bemutatkozás';
     });
-});
+  });
 
-const slides = [
-    {
-        caption: 'hegyvonulat alkonyatkor', svg: `
+  const slides = [
+    { caption: 'hegyvonulat alkonyatkor', svg: `
       <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
         <rect width="640" height="360" fill="#131313"/>
         <circle cx="470" cy="120" r="42" fill="#FF5A1F" opacity="0.85"/>
@@ -29,8 +28,7 @@ const slides = [
         <polygon points="380,270 520,150 640,270" fill="#1A1A1A"/>
         <rect y="270" width="640" height="90" fill="#0A0A0A"/>
       </svg>`},
-    {
-        caption: 'csillagos éjszaka', svg: `
+    { caption: 'csillagos éjszaka', svg: `
       <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
         <rect width="640" height="360" fill="#0A0A0A"/>
         <g fill="#F2F1EE">
@@ -44,8 +42,7 @@ const slides = [
         <polygon points="420,300 550,210 640,300" fill="#1A1A1A"/>
         <rect y="300" width="640" height="60" fill="#050505"/>
       </svg>`},
-    {
-        caption: 'erdei ösvény', svg: `
+    { caption: 'erdei ösvény', svg: `
       <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
         <rect width="640" height="360" fill="#161616"/>
         <rect y="240" width="640" height="120" fill="#0A0A0A"/>
@@ -59,8 +56,7 @@ const slides = [
         </g>
         <polygon points="270,360 320,230 370,360" fill="#FF5A1F" opacity="0.15"/>
       </svg>`},
-    {
-        caption: 'napkelte a technikum felett', svg: `
+    { caption: 'napkelte a technikum felett', svg: `
       <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
         <rect width="640" height="360" fill="#161616"/>
         <circle cx="320" cy="230" r="66" fill="#FF5A1F" opacity="0.35"/>
@@ -71,24 +67,24 @@ const slides = [
         <polygon points="210,200 320,150 430,200" fill="#1A1A1A"/>
         <rect y="300" width="640" height="60" fill="#050505"/>
       </svg>`}
-];
+  ];
 
-let slideIndex = -1;
-const frame = document.getElementById('gallery-frame');
-const caption = document.getElementById('gallery-caption');
-const revealBtn = document.getElementById('reveal-btn');
-const dotsWrap = document.getElementById('dots');
-slides.forEach(() => {
+  let slideIndex = -1;
+  const frame = document.getElementById('gallery-frame');
+  const caption = document.getElementById('gallery-caption');
+  const revealBtn = document.getElementById('reveal-btn');
+  const dotsWrap = document.getElementById('dots');
+  slides.forEach(() => {
     const d = document.createElement('div');
     d.className = 'dot';
     dotsWrap.appendChild(d);
-});
-const dotEls = dotsWrap.querySelectorAll('.dot');
+  });
+  const dotEls = dotsWrap.querySelectorAll('.dot');
 
-revealBtn.addEventListener('click', () => {
+  revealBtn.addEventListener('click', () => {
     slideIndex = (slideIndex + 1) % slides.length;
     frame.innerHTML = slides[slideIndex].svg;
     caption.textContent = (slideIndex + 1) + '/' + slides.length + ' — ' + slides[slideIndex].caption;
     dotEls.forEach((d, i) => d.classList.toggle('active', i === slideIndex));
     revealBtn.textContent = slideIndex === slides.length - 1 ? 'Kezdés elölről' : 'Következő kép';
-});
+  });
