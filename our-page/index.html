@@ -3,120 +3,103 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/image.png">
-    <title>POFI Csapat</title>
+    <link rel="icon" href="assets/icon.png">
+    <title>POFI — Bitfaragó bajnokság 2026</title>
 </head>
-
-<body onload="time()">
-    <!-- Navigation bar for the win -->
-    <div class="navbar">
-        <div class="header">
-            <p>POFI</p>
-            <p>CSAPAT 2026</p>
+<body>
+    <div class="hero">
+        <div class="wrap hero-top">
+            <p class="label">Bitfaragó bajnokság — 2026</p>
+            <h1 class="wordmark"><span>POFI</span> Csapat</h1>
+            <p class="members-line"><b>Palotai Kristóf</b> &nbsp;/&nbsp; <b>Horváth Bence</b> &nbsp;/&nbsp; <b>Kovács
+                    Norbert</b></p>
         </div>
-        <div class="school">
-            <p>ISKOLAI PARTNERÜNK</p>
-            <p>BKSZC Pogány Frigyes Technikum</p>
-        </div>
-        <div class="clock">
-            <p id="clockId">00:00</p>
-        </div>
-    </div>
-
-    <!-- About Us-->
-    <div class="aboutus">
-        <div class="hero-wrapper">
-            <div class="hero">
-                <p>Ismerd meg a <colored>POFI</colored> csapatát!</p>
-            </div>
-            <div class="description">
-                <p>
-                    Csapatunk kreatív, adaptív és probléma megoldó. Weboldal készítés és hálózati munka a
-                    specialitásunk.
-                    Csapattagjaink alaposak, kitartóak és nem félnek a nehéz feladatoktól. Az alábbiakban tekints meg
-                    egy rövid bemutatkozást tőlünk.
-                </p>
-            </div>
-            <div class="cards">
-                <div class="first card">
-                    <p>3 fő</p>
-                    <p>Aktív csapattag</p>
+        <div class="wrap">
+            <div class="meta-table">
+                <div class="meta-row">
+                    <div class="k mono">Iskola</div>
+                    <div class="v">BKSZC Pogány Frigyes Technikum</div>
                 </div>
-                <div class="second card">
-                    <p>100%</p>
-                    <p>Motiváció & fókusz</p>
-                </div>
-            </div>
-        </div>
-        <div class="aboutus-image">
-            <img src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM="
-                width="800px" height="500px">
-        </div>
-    </div>
-
-    <!-- Meet with our team -->
-    <div class="meetwus">
-        <div class="hero-wrapper">
-            <div class="hero">
-                <center><p>Kik állnak a <colored>POFI</colored> csapata mögött?</p></center>
-            </div>
-        </div>
-        <div class="cards">
-            <div class="member">
-                <img src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=" width="500px" height="500px">
-                <div class="desc">
-                    Csapat kapitány
-                </div>
-                <p>Palotai Kristóf</p>
-                <p>Teszt szöveg egy rövid bemutatkozásról. Semmi komoly csak kell egy placeholder hogy meg tudjam csinálni a CSS-t. Még egy pár szót kéne írjak hogy elég hosszú legyen a szöveg viszont ez nem annyira könnyű!</p>
-                <div class="bemutat">
-                    <button onclick="">Bemutatkozás</button>
-                </div>
-            </div>
-            <div class="member">
-                <img src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=" width="500px" height="500px">
-                <div class="desc">
-                    Első csapattag
-                </div>
-                <p>Kovács Norbert</p>
-                <p>Teszt szöveg egy rövid bemutatkozásról. Semmi komoly csak kell egy placeholder hogy meg tudjam csinálni a CSS-t. Még egy pár szót kéne írjak hogy elég hosszú legyen a szöveg viszont ez nem annyira könnyű!</p>
-                <div class="bemutat">
-                    <button onclick="">Bemutatkozás</button>
-                </div>
-            </div>
-            <div class="member">
-                <img src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=" width="500px" height="500px">
-                <div class="desc">
-                    Második csapattag
-                </div>
-                <p>Horváth Bence</p>
-                <p>Teszt szöveg egy rövid bemutatkozásról. Semmi komoly csak kell egy placeholder hogy meg tudjam csinálni a CSS-t. Még egy pár szót kéne írjak hogy elég hosszú legyen a szöveg viszont ez nem annyira könnyű!</p>
-                <div class="bemutat">
-                    <button onclick="">Bemutatkozás</button>
+                <div class="meta-row">
+                    <div class="k mono">Felkészítő</div>
+                    <div class="v">Toldi Gábor</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer --> 
-    <div class="footer">
-        <div class="left">
-            <p>POFI</p>
-            <p>Egy csapat, egy cél</p>
+    <section class="clock-wrap">
+        <div class="wrap">
+            <p class="label" style="justify-content:center;">Éppen most</p>
+            <div class="clock" id="clock">--<span class="colon">:</span>--<span class="colon">:</span>--</div>
+            <div class="clock-date" id="clock-date"></div>
         </div>
-        <div class="right">
-            <p>Kapcsolatok</p>
-            <p>info@pofiteam.hu</p>
-        </div>
-    </div>
+    </section>
 
-    <!-- Licensing yeaaaa -->
-    <div class="licensing">
-        &copy; 2026 POFI Csapat. Minden job fenttartva
-    </div>
+    <section>
+        <div class="wrap">
+            <p class="label">Csapat</p>
+            <div class="team-grid">
+
+                <div class="member">
+                    <div class="avatar">PK</div>
+                    <h3>Palotai Kristóf</h3>
+                    <p class="role">Csapatkapitány</p>
+                    <button class="bio-btn" aria-expanded="false" data-target="bio-1">Bemutatkozás</button>
+                    <p class="bio-text" id="bio-1">Kristóf a csapatkapitány, szívesen foglalkozik fullstack webfejlesztéssel
+                        és felhasználói felületek tervezésével. Szabadidejében alszik és League of Legendsel játszik.</p>
+                </div>
+
+                <div class="member">
+                    <div class="avatar">HB</div>
+                    <h3>Horváth Bence</h3>
+                    <p class="role">Tester</p>
+                    <button class="bio-btn" aria-expanded="false" data-target="bio-2">Bemutatkozás</button>
+                    <p class="bio-text" id="bio-2">Bence a tesztelésért és hálózati integritásért felelős.
+                        Kedvenc elfoglaltsága a hálózatok kiépítése.
+                    </p>
+                </div>
+
+                <div class="member">
+                    <div class="avatar">KN</div>
+                    <h3>Kovács Norbert</h3>
+                    <p class="role">Programozó</p>
+                    <button class="bio-btn" aria-expanded="false" data-target="bio-3">Bemutatkozás</button>
+                    <p class="bio-text" id="bio-3">Norbert a csapat agya. Fullstack tudásával képes összedobni bármilyen oldalt órák alatt.
+                        Szabadidejében Valorantozik és a legenda szerint sosem alszik.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <p class="label">Kivetítés</p>
+            <div class="gallery-frame" id="gallery-frame">
+                <span class="gallery-placeholder">Gomb megnyomására jelenik meg az első kép</span>
+            </div>
+            <div class="gallery-bottom">
+                <button class="reveal-btn" id="reveal-btn">Kép megjelenítése</button>
+                <span class="gallery-caption" id="gallery-caption"></span>
+                <div class="dots" id="dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            POFI <b>/</b> Bitfaragó bajnokság 2026 <b>/</b> BKSZC Pogány Frigyes Technikum
+        </div>
+    </footer>
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
