@@ -127,6 +127,9 @@ section:last-of-type {
     border-bottom: 1px solid var(--line);
     padding: 16px 0;
 }
+.no-row {
+    border-bottom: none;
+}
 
 .meta-row .k {
     font-family: 'IBM Plex Mono', monospace;
